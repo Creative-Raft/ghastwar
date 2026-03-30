@@ -1,0 +1,9 @@
+{
+    "pack": {
+        "description": {
+            "text": "轻量级小游戏框架包.",
+            "color": "green"
+        },
+        "pack_format": 94
+    }
+}
