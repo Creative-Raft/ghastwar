@@ -1,0 +1,22 @@
+[
+    {
+        "function": "set_components",
+        "components": {
+            "blocks_attacks": {
+                "damage_reductions": [
+                    {
+                        "base": 0,
+                        "factor": 1,
+                        "horizontal_blocking_angle": 90
+                    }
+                ],
+                "disable_cooldown_scale": 1,
+                "disabled_sound": "item.shield.break"
+            },
+            "use_effects": {
+                "speed_multiplier": 1,
+                "can_sprint": false
+            }
+        }
+    }
+]

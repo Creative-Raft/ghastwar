@@ -1,0 +1,4 @@
+scoreboard objectives add gw_block_damage custom:damage_blocked_by_shield
+scoreboard objectives add gamemode dummy
+
+scoreboard objectives add gw_axe_timer dummy

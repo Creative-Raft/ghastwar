@@ -1,0 +1,10 @@
+[
+    {
+        "function": "reference",
+        "name": "weapons:axe"
+    },
+    {
+        "function": "set_custom_data",
+        "tag": "{consume:1b}"
+    }
+]

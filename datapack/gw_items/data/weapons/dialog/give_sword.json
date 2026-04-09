@@ -1,0 +1,64 @@
+{
+    "type": "confirmation",
+    "title": "获取一把可以格挡的剑",
+    "inputs": [
+        {
+            "key": "angle",
+            "type": "number_range",
+            "label": "格挡角度",
+            "start": 30,
+            "end": 180,
+            "initial": 90,
+            "width": 300,
+            "step": 1
+        },
+        {
+            "key": "factor",
+            "type": "number_range",
+            "label": "格挡比例",
+            "start": 0,
+            "end": 1,
+            "initial": 1,
+            "step": 0.0500000000000000,
+            "width": 300
+        },
+        {
+            "key": "cooldown",
+            "type": "number_range",
+            "label": "破盾后冷却时长",
+            "start": 0,
+            "end": 10,
+            "initial": 1,
+            "step": 0.50000000000000,
+            "width": 300
+        },
+        {
+            "key": "sprint",
+            "type": "boolean",
+            "label": "格挡时是否能疾跑",
+            "on_true": "true",
+            "on_false": "false",
+            "initial": false
+        },
+        {
+            "key": "speed",
+            "type": "number_range",
+            "label": "格挡时步行速度",
+            "start": 0,
+            "end": 2,
+            "initial": 0.2,
+            "step": 0.100000000000,
+            "width": 300
+        }
+    ],
+    "yes": {
+        "label":"确定",
+        "action": {
+            "type": "dynamic/run_command",
+            "template": "give @s diamond_sword[blocks_attacks={damage_reductions:[{base:0,factor:$(factor),horizontal_blocking_angle:$(angle)}],disable_cooldown_scale:$(cooldown),disabled_sound:\"item.shield.break\"},use_effects={speed_multiplier:$(speed),can_sprint:$(sprint)}]"
+        }
+    },
+    "no": {
+        "label": "取消"
+    }
+}

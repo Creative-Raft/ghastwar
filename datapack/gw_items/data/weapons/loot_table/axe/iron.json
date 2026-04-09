@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "iron_axe",
+                    "functions": [
+                        {
+                            "function": "reference",
+                            "name": "weapons:axe"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

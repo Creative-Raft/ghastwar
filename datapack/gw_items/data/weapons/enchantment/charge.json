@@ -1,0 +1,34 @@
+{
+    "anvil_cost": 4,
+    "description": {
+        "text": ""
+    },
+    "effects": {
+        "location_changed": [
+            {
+                "effect": {
+                    "type": "minecraft:play_sound",
+                    "pitch": 1.0,
+                    "sound": [
+                        "item.mace.smash_ground"
+                    ],
+                    "volume": 1.0
+                }
+            }
+        ]
+    },
+    "max_cost": {
+        "base": 21,
+        "per_level_above_first": 8
+    },
+    "max_level": 5,
+    "min_cost": {
+        "base": 1,
+        "per_level_above_first": 8
+    },
+    "slots": [
+        "saddle"
+    ],
+    "weight": 2,
+    "supported_items": "stone"
+}

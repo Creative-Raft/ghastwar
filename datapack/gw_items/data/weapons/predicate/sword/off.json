@@ -1,0 +1,19 @@
+{
+    "condition": "all_of",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "equipment": {
+                    "offhand": {
+                        "items": "#swords",
+                        "predicates": {
+                            "blocks_attacks": {}
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

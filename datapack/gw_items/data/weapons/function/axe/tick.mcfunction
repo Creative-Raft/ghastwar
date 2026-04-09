@@ -1,0 +1,1 @@
+execute if entity @s[tag=gw_axe_charge] at @s run function weapons:axe/charge

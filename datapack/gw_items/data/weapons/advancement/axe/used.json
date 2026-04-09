@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "1":{
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "items": "#axes",
+                    "predicates": {
+                        "custom_data": "{gw_axe:1b}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "weapons:axe/trigger"
+    }
+}

@@ -1,0 +1,204 @@
+[
+    {
+        "function": "set_components",
+        "components": {
+            "consumable": {
+                "consume_seconds":0.7,
+                "sound": {
+                    "sound_id": "empty"
+                },
+                "has_consume_particles": false,
+                "animation": "trident"
+            },
+            "use_cooldown": {
+                "seconds": 5,
+                "cooldown_group": "gw:axe"
+            },
+            "custom_data": "{gw_axe:1b,consume:0b}",
+            "unbreakable": {},
+            "weapon": {
+                "item_damage_per_attack": 0,
+                "disable_blocking_for_seconds": 2.5
+            }
+        }
+    },
+    {
+        "function": "filtered",
+        "item_filter": {
+            "items": "netherite_axe"
+        },
+        "on_pass": {
+            "function": "set_components",
+            "components": {
+                "attribute_modifiers": [
+                    {
+                        "id": "base_attack_damage",
+                        "amount": 9,
+                        "type": "attack_damage",
+                        "operation": "add_value",
+                        "slot": "mainhand"
+                    },
+                    {
+                        "id": "base_attack_speed",
+                        "amount": -3,
+                        "type": "attack_speed",
+                        "operation": "add_value",
+                        "slot": "mainhand"
+                    }
+                ],
+                "use_remainder": {
+                    "id": "netherite_axe",
+                    "components": {
+                        "custom_data": "{gw_axe_used:1b}",
+                        "weapon": {
+                            "item_damage_per_attack": 0,
+                            "disable_blocking_for_seconds": 10
+                        }
+                    }
+                }
+            }
+        },
+        "on_fail": {
+            "function": "filtered",
+            "item_filter": {
+                "items": "diamond_axe"
+            },
+            "on_pass": {
+                "function": "set_components",
+                "components": {
+                    "attribute_modifiers": [
+                        {
+                            "id": "base_attack_damage",
+                            "amount": 8,
+                            "type": "attack_damage",
+                            "operation": "add_value",
+                            "slot": "mainhand"
+                        },
+                        {
+                            "id": "base_attack_speed",
+                            "amount": -3,
+                            "type": "attack_speed",
+                            "operation": "add_value",
+                            "slot": "mainhand"
+                        }
+                    ],
+                    "use_remainder": {
+                        "id": "diamond_axe",
+                        "components": {
+                            "custom_data": "{gw_axe_used:1b}",
+                            "weapon": {
+                                "item_damage_per_attack": 0,
+                                "disable_blocking_for_seconds": 10
+                            }
+                        }
+                    }
+                }
+            },
+            "on_fail": {
+                "function": "filtered",
+                "item_filter": {
+                    "items": "iron_axe"
+                },
+                "on_pass": {
+                    "function": "set_components",
+                    "components": {
+                        "attribute_modifiers": [
+                            {
+                                "id": "base_attack_damage",
+                                "amount": 7,
+                                "type": "attack_damage",
+                                "operation": "add_value",
+                                "slot": "mainhand"
+                            },
+                            {
+                                "id": "base_attack_speed",
+                                "amount": -3,
+                                "type": "attack_speed",
+                                "operation": "add_value",
+                                "slot": "mainhand"
+                            }
+                        ],
+                        "use_remainder": {
+                            "id": "iron_axe",
+                            "components": {
+                                "custom_data": "{gw_axe_used:1b}",
+                                "weapon": {
+                                    "item_damage_per_attack": 0,
+                                    "disable_blocking_for_seconds": 10
+                                }
+                            }
+                        }
+                    }
+                },
+                "on_fail": {
+                    "function": "filtered",
+                    "item_filter": {
+                        "items": "stone_axe"
+                    },
+                    "on_pass": {
+                        "function": "set_components",
+                        "components": {
+                            "attribute_modifiers": [
+                                {
+                                    "id": "base_attack_damage",
+                                    "amount": 6,
+                                    "type": "attack_damage",
+                                    "operation": "add_value",
+                                    "slot": "mainhand"
+                                },
+                                {
+                                    "id": "base_attack_speed",
+                                    "amount": -3,
+                                    "type": "attack_speed",
+                                    "operation": "add_value",
+                                    "slot": "mainhand"
+                                }
+                            ],
+                            "use_remainder": {
+                                "id": "stone_axe",
+                                "components": {
+                                    "custom_data": "{gw_axe_used:1b}",
+                                    "weapon": {
+                                        "item_damage_per_attack": 0,
+                                        "disable_blocking_for_seconds": 10
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "on_fail": {
+                        "function": "set_components",
+                        "components": {
+                            "attribute_modifiers": [
+                                {
+                                    "id": "base_attack_damage",
+                                    "amount": 5,
+                                    "type": "attack_damage",
+                                    "operation": "add_value",
+                                    "slot": "mainhand"
+                                },
+                                {
+                                    "id": "base_attack_speed",
+                                    "amount": -3,
+                                    "type": "attack_speed",
+                                    "operation": "add_value",
+                                    "slot": "mainhand"
+                                }
+                            ],
+                            "use_remainder": {
+                                "id": "wooden_axe",
+                                "components": {
+                                    "custom_data": "{gw_axe_used:1b}",
+                                    "weapon": {
+                                        "item_damage_per_attack": 0,
+                                        "disable_blocking_for_seconds": 10
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+]
